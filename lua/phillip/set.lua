@@ -1,4 +1,15 @@
-vim.opt.guicursor = ""
+--Cursor settings //Might not work for all terminals
+--terminal settings might take precedence
+vim.opt.guicursor = {
+    "n-v-c:block-Cursor", 
+    "i:ver25-CursorInsert", 
+    "r-cr-o:hor20-CursorReplace", 
+}
+vim.cmd [[
+  highlight Cursor guifg=white guibg=yellow
+  highlight CursorInsert guifg=white guibg=yellow
+  highlight CursorReplace guifg=white guibg=yellow
+]]
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
